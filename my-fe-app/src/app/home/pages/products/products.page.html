@@ -1,1 +1,14 @@
 <p>products works!</p>
+
+
+<app-products *ngFor="let product of products"></app-products>
+<app-products></app-products>
+<app-products></app-products>
+<p *ngFor="let product of products">
+    product: <b>{{product.name}}</b>
+</p>
+
+
+<pre>
+{{ products | json }}
+</pre>
