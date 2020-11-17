@@ -1,0 +1,37 @@
+:host{
+    overflow:auto;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    width: 300px;
+}
+
+img{
+    float: left;
+    margin-right:10px;
+    height: 70px;
+}
+
+b {
+    color: blue;
+}
+
+.btns {
+    margin-top: 5px;
+    button {
+        margin-right:5 px;
+    }
+}
+
+.btns-top {
+    position: absolute;
+    top:0;
+    right:0;
+    ::ng-deep button {
+        display:none;
+    }
+}
+
+:host:hover ::ng-deep .btns-top button {
+    display: inline-block;
+}

@@ -9,7 +9,7 @@ import { Product } from 'src/app/api/api.model';
 export class ProductComponent implements OnInit {
 
   @Input()
-  label = "Product: "
+  label = "Product name: "
 
    @Input()
    product: Product | null = null; 

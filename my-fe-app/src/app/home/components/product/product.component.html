@@ -1,10 +1,19 @@
 <ng-container *ngIf="product">
     <img src="{{product | productPhotoUrl}}">    
-    <i>{{label}}:</i>
-    {{label}}:<b>{{product.name | lowercase}}</b> 
-    {{label}}:<b>{{product.id }}</b> 
-    <button >DELETE</button>
-    <button >COPY</button>
-    {{currentDate | date:dateFormat}}
+    <i>Product ID: </i><b>{{product.id }}</b>  <BR>
+    <i>{{label}}: </i><b>{{product.name | uppercase}}</b> <BR>
+    <i>Updated At: </i><b>{{currentDate | date:dateFormat}}</b>
+
+    <div class="btns">
+        <ng-content></ng-content>
+    </div>
+
+    <div class="btns-top">
+        <ng-content select="[top]"></ng-content>
+    </div>
+    
+    
+    <button >Delete</button>
+    <button >Details</button>
     <BR>
 </ng-container>

@@ -3,6 +3,9 @@
 Selected ID:<b>{{selectedId}}</b><BR>
 Selected Name:<b>{{selectedName}}</b><BR>
 Selected Price:<b>{{selectedPrice}}</b><BR>
+    
+<button (click)= "selectedId = null; selectedName = null; selectedPrice = null; ">RESET</button><BR>
+<HR>
 
 <app-product 
     [product]="product"
