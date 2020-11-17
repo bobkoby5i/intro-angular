@@ -12,10 +12,16 @@ export class ProductsPage implements OnInit {
     {id:2, sku:'10001002', name: 'Mouse', price:"350"},
     {id:3, sku:'10001003', name: 'Monitor', price:"400"},
   ];
+
+  selectedId: number | null = null;
   
   constructor() { }
 
   ngOnInit(): void {
+    console.log('INIT Contact Page')
   }
+  ngOnDestroy(){
+    console.log('DESTROY Contact Page')
+  }  
 
 }

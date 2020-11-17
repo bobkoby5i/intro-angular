@@ -1,11 +1,22 @@
 <p>products works!</p>
 
+<h2>Products us:</h2>
+<div class="menu">
+  <p *ngFor="let product of products">
+    <a [routerLink]="[product.id]">{{product.name}}</a>
+  </p>
+</div>
 
-<app-products *ngFor="let product of products"></app-products>
-<app-products></app-products>
-<app-products></app-products>
+<b>Selected ID:{{selectedId}}</b>
+
+<app-product 
+    [product]="product"
+    *ngFor="let product of products"
+    >
+</app-product>
+HERE
 <p *ngFor="let product of products">
-    product: <b>{{product.name}}</b>
+    peoducts.page.contact from loop ngFor: product: <b>{{product.name}}</b>
 </p>
 
 

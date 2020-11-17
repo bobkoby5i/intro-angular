@@ -1,14 +1,21 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Product } from 'src/app/api/api.model';
 
 @Component({
-  selector: 'app-products',
+  selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductsComponent implements OnInit {
+export class ProductComponent implements OnInit {
 
   @Input()
-  label = "ContactLabel"
+  label = "Product: "
+
+   @Input()
+   product: Product | null = null; 
+
+   currentDate = new Date();
+   dateFormat ="y"
 
   constructor() { }
 
