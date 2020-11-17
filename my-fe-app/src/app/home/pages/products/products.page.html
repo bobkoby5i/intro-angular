@@ -1,21 +1,18 @@
-<p>products works!</p>
+<h2>Our products:</h2>
 
-<h2>Products us:</h2>
-<div class="menu">
-  <p *ngFor="let product of products">
-    <a [routerLink]="[product.id]">{{product.name}}</a>
-  </p>
-</div>
-
-<b>Selected ID:{{selectedId}}</b>
+Selected ID:<b>{{selectedId}}</b><BR>
+Selected Name:<b>{{selectedName}}</b><BR>
+Selected Price:<b>{{selectedPrice}}</b><BR>
 
 <app-product 
     [product]="product"
+    (mouseover)="handleProductMouseOver(product)"
     *ngFor="let product of products"
     >
 </app-product>
-HERE
+ngFor: 
 <p *ngFor="let product of products">
+
     peoducts.page.contact from loop ngFor: product: <b>{{product.name}}</b>
 </p>
 

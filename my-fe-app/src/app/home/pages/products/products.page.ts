@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/api/api.model';
 
 @Component({
   //selector: 'app-products',
@@ -14,6 +15,8 @@ export class ProductsPage implements OnInit {
   ];
 
   selectedId: number | null = null;
+  selectedName: string | null = null;
+  selectedPrice: number | null = null;
   
   constructor() { }
 
@@ -23,5 +26,11 @@ export class ProductsPage implements OnInit {
   ngOnDestroy(){
     console.log('DESTROY Contact Page')
   }  
+  handleProductMouseOver(product: Product){
+    this.selectedId = product.id
+    this.selectedName = product.name
+    this.selectedPrice = product.price
+    //this.contacts.push(contact)
+  }
 
 }

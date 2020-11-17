@@ -1,16 +1,10 @@
-<p>product component works!</p>
 <ng-container *ngIf="product">
+    <img src="{{product | productPhotoUrl}}">    
     <i>{{label}}:</i>
     {{label}}:<b>{{product.name | lowercase}}</b> 
     {{label}}:<b>{{product.id }}</b> 
     <button >DELETE</button>
     <button >COPY</button>
-    <img src="{{product | productPhotoUrl}}">    
-    <BR>
-    
     {{currentDate | date:dateFormat}}
-    <div class="btns">
-        <button >DELETE</button>
-        <button >COPY</button>
-    </div>
+    <BR>
 </ng-container>
