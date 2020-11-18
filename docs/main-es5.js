@@ -1510,9 +1510,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.http = http;
         this.products = [];
         this.selectedName = null;
-        this.base = "http://koby5i-spring-boot-intro-wh.herokuapp.com/api";
-        console.log('ProductsService Constructor bas=' + this.base);
-        this.base = 'http://koby5i-spring-boot-intro-wh.herokuapp.com/api'; //this.base = "http://localhost:8080/api";
+        this.base = "https://koby5i-spring-boot-intro-wh.herokuapp.com/api";
+        console.log('ProductsService Constructor bas=' + this.base); //this.base = 'httsp://koby5i-spring-boot-intro-wh.herokuapp.com/api';
+        //this.base = "http://localhost:8080/api";
       }
 
       _createClass(ProductsService, [{
