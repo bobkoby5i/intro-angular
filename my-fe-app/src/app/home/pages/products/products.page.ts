@@ -4,10 +4,11 @@ import { ProductsService } from '../../services/products.service';
 import { Subscription } from 'rxjs';
 
 @Component({
-  //selector: 'app-products',
+  // selector: 'app-products',
   templateUrl: './products.page.html',
   styleUrls: ['./products.page.scss']
 })
+
 export class ProductsPage implements OnInit {
 
   // products = [
@@ -16,13 +17,13 @@ export class ProductsPage implements OnInit {
   //   {id:3, sku:'10001003', name: 'Monitor', price:"400"},
   // ];
 
-  products: Product[]= [];
-  sub = new Subscription();  
+  products: Product[] = [];
+  sub = new Subscription();
 
   selectedId: number | null = null;
   selectedName: string | null = null;
   selectedPrice: number | null = null;
-  
+
   constructor(private productsService: ProductsService,) { }
 
   ngOnInit(): void {
@@ -31,27 +32,26 @@ export class ProductsPage implements OnInit {
     this.sub.add(s);
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     console.log('DESTROY Products Page; going HOME ?')
-    this.sub.unsubscribe()
-  }  
+    this.sub.unsubscribe();
+  }
 
-  handleProductMouseOver(product: Product){
-    this.selectedId    = product.id
-    this.selectedName  = product.name
-    this.selectedPrice = product.price
+  handleProductMouseOver(product: Product) {
+    this.selectedId    = product.id;
+    this.selectedName  = product.name;
+    this.selectedPrice = product.price;
   }
 
   handleDeleteProduct(product: Product)
   {
-    console.log('Products page: handleDeleteProduct()')
-    this.products  = this.products.filter(c => c !== product)
+    console.log('Products page: handleDeleteProduct()');
+    this.products  = this.products.filter(c => c !== product);
   }
 
-  handleEditProduct(product: Product)
-  {
-    console.log('Products page: handleEditProduct()')
-    this.products.push({...product})
-  }  
+  handleEditProduct(product: Product) {
+    console.log('Products page: handleEditProduct()');
+    this.products.push({...product});
+  }
 
 }

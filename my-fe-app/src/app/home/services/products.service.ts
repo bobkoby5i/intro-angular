@@ -10,14 +10,14 @@ export class ProductsService {
 
   products: Product[]=[];
   selectedName: string | null = null;
-  base: string | null = "http://koby5i-spri6ng-boot-intro-wh.herokuapp.com/api";
+  base: string | null = "http://koby5i-spring-boot-intro-wh.herokuapp.com/api";
 
   constructor(private http: HttpClient,
     //@Inject(API_BASE_URL) private base:string,
     ) {
-      console.log('ProductsService Constructor bas='+this.base);
-      //this.base = "http://koby5i-spri6ng-boot-intro-wh.herokuapp.com/api";
-      this.base = "http://localhost:8080/api";
+      console.log('ProductsService Constructor bas=' + this.base);
+      this.base = 'http://koby5i-spring-boot-intro-wh.herokuapp.com/api';
+      //this.base = "http://localhost:8080/api";
      }
 
 

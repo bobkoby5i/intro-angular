@@ -9,13 +9,13 @@ import { Product } from 'src/app/api/api.model';
 export class ProductComponent implements OnInit {
 
   @Input()
-  label = "Product name"
+  label = 'Product name';
 
    @Input()
-   product: Product | null = null; 
+   product: Product | null = null;
 
    currentDate = new Date();
-   dateFormat ="y"
+   dateFormat = 'y';
 
   constructor() { }
 

@@ -26,11 +26,7 @@ const routes: Routes = [
         component: ProductDetailsPage 
       }
     ]
-  },
-  {
-    path: 'products/:id',
-    component: ProductDetailsPage, //czy to jest dobrze ?
-  }    
+  }
 ];
 
 @NgModule({
