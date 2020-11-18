@@ -1,7 +1,10 @@
 <ng-container *ngIf="product">
     <img src="{{product | productPhotoUrl}}">    
     <i>Product ID: </i><b>{{product.id }}</b>  <BR>
-    <i>{{label}}: </i><b>{{product.name | uppercase}}</b> <BR>
+    <i>{{label}}: </i><a [routerLink]="[product.id]">{{product.name | uppercase}}</a> <BR>
+
+        
+
     <i>Updated At: </i><b>{{currentDate | date:dateFormat}}</b>
 
     <div class="btns">
@@ -13,7 +16,6 @@
     </div>
     
     
-    <button >Delete</button>
-    <button >Details</button>
+
     <BR>
 </ng-container>

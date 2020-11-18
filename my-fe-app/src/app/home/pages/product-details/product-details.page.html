@@ -1,0 +1,13 @@
+<p>product-details works!</p>
+<ng-container *ngIf="product$ | async as product; else loadingTpl">
+    <app-product [product]="product$ | async" (deleteEventEmiter)="handleDeleteProduct($event)">
+        <button (click)="handleDeleteProduct(product)">Kasuj</button>
+        <button (click)="handleEditProduct(product)">Edytuj</button>
+    </app-product>
+    </ng-container>
+
+
+
+<ng-template #loadingTpl>
+    Loading ...
+</ng-template>

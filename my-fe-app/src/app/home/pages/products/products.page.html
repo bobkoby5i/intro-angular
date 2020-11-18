@@ -1,4 +1,4 @@
-<h2>Our products:</h2>
+<h2>PRODUCTS PAGE</h2>
 
 Selected ID:<b>{{selectedId}}</b><BR>
 Selected Name:<b>{{selectedName}}</b><BR>
@@ -8,13 +8,16 @@ Selected Price:<b>{{selectedPrice}}</b><BR>
 <HR>
 
 <div class="content">
-    CONTENT
+    <h3>PRODUCT DETAILS PAGE</h3>
     <router-outlet></router-outlet>
 </div>    
+<HR>
 
 <app-product 
     [product]="product"
     (mouseover)="handleProductMouseOver(product)"
+    (deleteEventEmiter)="handleDeleteProduct($event)"
+    (copyEventEmiter)="handleEditProduct($event)"    
     *ngFor="let product of products"
     >
 </app-product>

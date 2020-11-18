@@ -42,4 +42,16 @@ export class ProductsPage implements OnInit {
     this.selectedPrice = product.price
   }
 
+  handleDeleteProduct(product: Product)
+  {
+    console.log('Products page: handleDeleteProduct()')
+    this.products  = this.products.filter(c => c !== product)
+  }
+
+  handleEditProduct(product: Product)
+  {
+    console.log('Products page: handleEditProduct()')
+    this.products.push({...product})
+  }  
+
 }
