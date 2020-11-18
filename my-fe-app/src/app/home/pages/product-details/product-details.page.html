@@ -1,8 +1,13 @@
 <p>product-details works!</p>
 <ng-container *ngIf="product$ | async as product; else loadingTpl">
     <app-product [product]="product$ | async" (deleteEventEmiter)="handleDeleteProduct($event)">
+        <i>Description: </i><b>{{product.description }}</b>  <BR>
+        <i>CreatedAt: </i>{{product.createdAt | date:dateFormat  }}  <BR>
+        <i>UpdatedAt: </i>{{product.updatedAt }}  <BR>
         <button (click)="handleDeleteProduct(product)">Kasuj</button>
         <button (click)="handleEditProduct(product)">Edytuj</button>
+
+
     </app-product>
     </ng-container>
 

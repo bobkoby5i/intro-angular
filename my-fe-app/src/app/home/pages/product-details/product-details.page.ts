@@ -14,6 +14,7 @@ export class ProductDetailsPage implements OnInit {
 
   product: Product | null = null
   params: any;
+  dateFormat ="yyyy-MM-dd HH:mm:ss"
 
   product$: Observable<Product>;
 
