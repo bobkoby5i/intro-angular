@@ -7,6 +7,11 @@ Selected Price:<b>{{selectedPrice}}</b><BR>
 <button (click)= "selectedId = null; selectedName = null; selectedPrice = null; ">RESET</button><BR>
 <HR>
 
+<div class="content">
+    CONTENT
+    <router-outlet></router-outlet>
+</div>    
+
 <app-product 
     [product]="product"
     (mouseover)="handleProductMouseOver(product)"
