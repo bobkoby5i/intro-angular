@@ -12,8 +12,8 @@ export class ProductsService {
   products: Product[] = [];
   selectedName: string | null = null;
   reload$ = new Subject();
-  //base: string | null = 'https://koby5i-spring-boot-intro-wh.herokuapp.com/api';
-  base: string | null = 'http://localhost:8080/api';
+  base: string | null = 'https://koby5i-spring-boot-intro-wh.herokuapp.com/api';
+  //base: string | null = 'http://localhost:8080/api';
 
   constructor(private http: HttpClient,
     //@Inject(API_BASE_URL) private base:string,

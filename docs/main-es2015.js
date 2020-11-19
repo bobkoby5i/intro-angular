@@ -864,13 +864,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class ProductsService {
+    //base: string | null = 'http://localhost:8080/api';
     constructor(http) {
         this.http = http;
         this.products = [];
         this.selectedName = null;
         this.reload$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
-        //base: string | null = 'https://koby5i-spring-boot-intro-wh.herokuapp.com/api';
-        this.base = 'http://localhost:8080/api';
+        this.base = 'https://koby5i-spring-boot-intro-wh.herokuapp.com/api';
         console.log('ProductsService Constructor base = ' + this.base);
     }
     getProducts() {
