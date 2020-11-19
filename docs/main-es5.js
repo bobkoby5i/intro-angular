@@ -1802,15 +1802,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ProductsService =
     /*#__PURE__*/
     function () {
+      //base: string | null = 'http://localhost:8080/api';
       function ProductsService(http) {
         _classCallCheck(this, ProductsService);
 
         this.http = http;
         this.products = [];
         this.selectedName = null;
-        this.reload$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"](); //base: string | null = 'https://koby5i-spring-boot-intro-wh.herokuapp.com/api';
-
-        this.base = 'http://localhost:8080/api';
+        this.reload$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this.base = 'https://koby5i-spring-boot-intro-wh.herokuapp.com/api';
         console.log('ProductsService Constructor base = ' + this.base);
       }
 
